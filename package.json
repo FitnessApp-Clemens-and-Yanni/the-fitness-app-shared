@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b"
+    "build": "tsc -b && git add -A && git commit -am 'update shared code' && git push && cd ../mobile && npm install && cd ../shared"
   },
   "devDependencies": {
     "typescript": "5.8.3"
