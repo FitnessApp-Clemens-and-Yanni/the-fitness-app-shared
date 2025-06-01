@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.postiveIntegerStringSchema = postiveIntegerStringSchema;
 exports.positiveNumberStringSchema = positiveNumberStringSchema;
-const zod_1 = require("zod");
+const v4_1 = require("zod/v4");
 function postiveIntegerStringSchema(messageForWhenEmpty, options = { zeroAllowed: true }) {
-    const obj = zod_1.z
+    const obj = v4_1.z
         .string({
         message: messageForWhenEmpty ?? "Please provide a valid string.",
     })
@@ -17,7 +17,7 @@ function postiveIntegerStringSchema(messageForWhenEmpty, options = { zeroAllowed
     return obj.transform(Number);
 }
 function positiveNumberStringSchema(messageForWhenEmpty, options = { zeroAllowed: true }) {
-    const obj = zod_1.z
+    const obj = v4_1.z
         .string({
         message: messageForWhenEmpty ?? "Please provide a valid string.",
     })
